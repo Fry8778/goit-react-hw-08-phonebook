@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContacts } from '../../redux/contacts/contactsOperations';
 import { getStateItems } from '../../redux/contacts/contactsSelector';
-import styles from './form.module.css';
+import s from './form.module.css';
 
 const Form = () => {
   const [name, setName] = useState('');
@@ -30,11 +30,11 @@ const Form = () => {
   };
   
   return (
-    <form onSubmit={handleSubmitRen} className={styles.form}>
-      <label className={styles.label}>
+    <form onSubmit={handleSubmitRen} className={s.form}>
+      <label className={s.label}>
         Name
         <input
-          className={styles.input}
+          className={s.input}
           type="text"
           name="name"
           value={name}
@@ -44,10 +44,10 @@ const Form = () => {
           required
         />
       </label>
-      <label className={styles.label}>
+      <label className={s.label}>
         Number
         <input
-          className={styles.input}
+          className={s.input}
           type="tel"
           name="phone"
           value={phone}
