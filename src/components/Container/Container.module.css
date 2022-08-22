@@ -1,12 +1,13 @@
 .container {
   width: 800px;
-  height: 300px;
+  min-height: 484px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 200px;
   display: flex;
   background-color: rgba(47, 139, 245, 0.952);
+  border: 1px solid rgba(47, 139, 245, 0.952);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 10px 13px -7px #000000;
-  min-height: 484px;
 }
