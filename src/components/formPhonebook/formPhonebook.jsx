@@ -17,7 +17,7 @@ const FormPhonebook  = () => {
       {contacts.map(el => (
           <li key={el.id} className={styles.item}>
             <p className={styles.conParagraph}>
-              {el.name}: <span>{el.phone}</span>
+              {el.name}: <span>{el.number}</span>
             </p>
             <button
               className={styles.btn}
