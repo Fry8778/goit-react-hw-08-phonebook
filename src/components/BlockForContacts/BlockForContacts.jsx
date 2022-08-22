@@ -1,4 +1,4 @@
-import Form from '../Form/Form';
+import Form from '../form/form';
 import Filter from '../filter/filter';
 
 const BlockForContacts = () => {

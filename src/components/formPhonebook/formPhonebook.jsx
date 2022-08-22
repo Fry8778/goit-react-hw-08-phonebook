@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts, removeContacts } from '../../redux/contacts/contactsOperations';
-import s from '../Form/Form';
+import s from '../form/form';
 import { contactsAfterFilter } from '../../redux/contacts/contactsSelector';
 
 const FormPhonebook  = () => {
