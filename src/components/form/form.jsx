@@ -7,21 +7,21 @@ import s from './form.module.css';
 
 const Form = () => {
   const [name, setName] = useState('');
-  const [phone, setNumber] = useState('');
+  const [number, setNumber] = useState('');
   const contacts = useSelector(getStateItems);
   const dispatch = useDispatch();
 
   const handleChange = e => {
     const input = e.target;
     input.name === 'name' && setName(input.value);
-    input.name === 'phone' && setNumber(input.value);
+    input.name === 'number' && setNumber(input.value);
   };
 
   const handleSubmitRen = e => {
     e.preventDefault();
     const check = contacts.find(el => el.name.toLowerCase() === name.toLowerCase());
     if (!check) {
-      dispatch(addContacts({ name, phone }));
+      dispatch(addContacts({ name, number }));
       setName('');
       setNumber('');
     } else {
@@ -49,8 +49,8 @@ const Form = () => {
         <input
           className={s.input}
           type="tel"
-          name="phone"
-          value={phone}
+          name="number"
+          value={number}
           onChange={handleChange}
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
