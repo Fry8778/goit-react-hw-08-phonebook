@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts, removeContacts } from '../../redux/contacts/contactsOperations';
-import styles from '../form/form.module.css';
+import s from '../Form/Form';
 import { contactsAfterFilter } from '../../redux/contacts/contactsSelector';
 
 const FormPhonebook  = () => {
@@ -13,14 +13,14 @@ const FormPhonebook  = () => {
   }, []);
 
   return (
-    <ul className={styles.contact}>
+    <ul className={s.contact}>
       {contacts.map(el => (
-          <li key={el.id} className={styles.item}>
-            <p className={styles.conParagraph}>
+          <li key={el.id} className={s.item}>
+            <p className={s.conParagraph}>
               {el.name}: <span>{el.number}</span>
             </p>
             <button
-              className={styles.btn}
+              className={s.btn}
               type="button"
               onClick={() => dispatch(removeContacts(el.id))}
             >
